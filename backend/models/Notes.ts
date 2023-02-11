@@ -2,9 +2,9 @@ import mongoose from "mongoose";
 const { Schema } = mongoose;
 
 const notesSchema = new Schema({
-  emailOrId: {
-    type: String,
-    required: true,
+  user: {
+    type: Schema.Types.ObjectId,
+    reference: 'user',
   },
   tags: {
     type: String,

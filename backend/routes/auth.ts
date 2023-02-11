@@ -162,6 +162,7 @@ router.post(
 
       const data = {};
       data["password"] = secPassword;
+      data["lastUpdated"] = new Date();
 
       //Get User Id from request and verify if User exists
       const userId = req.user.id;
